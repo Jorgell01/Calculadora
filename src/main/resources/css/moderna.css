@@ -1,0 +1,90 @@
+/* Raíz */
+.root {
+    -fx-background-color: black;
+    -fx-font-family: monospace;
+    -fx-hgap: 5px;
+    -fx-vgap: 5px;
+    -fx-padding: 5px;
+}
+
+/* Cuadros de texto */
+.text-field {
+    -fx-text-fill: lightgray;
+    -fx-alignment: CENTER_RIGHT;
+    -fx-font-size: 25px;
+    -fx-font-weight: bold;
+    -fx-padding: 10px;
+    -fx-background-color: transparent;
+    -fx-background-insets: 0;
+}
+
+/* Botones */
+.button {
+    -fx-font-size: 16px;
+    -fx-background-radius: 5em;
+    -fx-background-insets: 0;
+    -fx-border-radius: 5em;
+}
+
+.button:focused {
+    -fx-border-color: white;
+}
+
+.button:armed {
+    -fx-border-color: yellow;
+}
+
+/* Botones numéricos */
+.button.numeric {
+    -fx-text-fill: white;
+    -fx-background-color: darkgray;
+}
+
+.button.numeric:hover {
+    -fx-text-fill: darkgray;
+    -fx-background-color: white;
+}
+
+.button.numeric:pressed {
+    -fx-text-fill: lightgray;
+    -fx-background-color: black;
+}
+
+/* Botones de reinicio */
+.button.reset {
+    -fx-text-fill: black;
+    -fx-background-color: lightgray;
+}
+
+.button.reset:hover {
+    -fx-background-color: white;
+}
+
+.button.reset:pressed {
+    -fx-text-fill: lightgray;
+    -fx-background-color: black;
+}
+
+/* Botones de operación */
+.button.operation {
+    -fx-text-fill: white;
+    -fx-background-color: orange;
+}
+
+.button.operation:hover {
+    -fx-background-color: darkorange;
+}
+
+.button.operation:pressed {
+    -fx-text-fill: orange;
+    -fx-background-color: white;
+}
+
+.button.operation:default:hover {
+    -fx-background-color: red;
+}
+
+/* Botón de operación por defecto (igual) */
+.button.equals {
+    -fx-background-color: orangered;
+}

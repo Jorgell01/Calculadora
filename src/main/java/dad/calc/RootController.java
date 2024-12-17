@@ -2,8 +2,10 @@ package dad.calc;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
+import javafx.stage.Stage;
 
 public class RootController {
 
@@ -12,6 +14,12 @@ public class RootController {
 
     @FXML
     private TextField resultados;
+
+    @FXML
+    private Button classicButton;
+
+    @FXML
+    private Button modernButton;
 
     private Calculadora calc;
 
@@ -78,4 +86,25 @@ public class RootController {
         // Actualizar la pantalla
         resultados.setText(calc.getPantalla());
     }
+
+    @FXML
+    void onClassicAction(ActionEvent event) {
+        // Obtener la escena actual
+        Scene scene = ((Stage) ((Button) event.getSource()).getScene().getWindow()).getScene();
+        // Limpiar las hojas de estilo actuales
+        scene.getStylesheets().clear();
+        // Agregar la hoja de estilo clásica
+        scene.getStylesheets().add(getClass().getResource("/css/clasica.css").toExternalForm());
+    }
+
+    @FXML
+    void onModernAction(ActionEvent event) {
+        // Obtener la escena actual
+        Scene scene = ((Stage) ((Button) event.getSource()).getScene().getWindow()).getScene();
+        // Limpiar las hojas de estilo actuales
+        scene.getStylesheets().clear();
+        // Agregar la hoja de estilo moderna
+        scene.getStylesheets().add(getClass().getResource("/css/moderna.css").toExternalForm());
+    }
+
 }
